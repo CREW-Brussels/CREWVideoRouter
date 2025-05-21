@@ -1,26 +1,26 @@
-#include "BlackmagicRouterComponent.h"
+#include "CREWVideoRouterComponent.h"
 #include "Networking.h"
 #include "Sockets.h"
 #include "SocketSubsystem.h"
 
-UBlackmagicRouterComponent::UBlackmagicRouterComponent()
+UCREWVideoRouterComponent::UCREWVideoRouterComponent()
 {
 	PrimaryComponentTick.bCanEverTick = false;
 }
 
-void UBlackmagicRouterComponent::BeginPlay()
+void UCREWVideoRouterComponent::BeginPlay()
 {
 	Super::BeginPlay();
 	ConnectToServer();
 }
 
-void UBlackmagicRouterComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
+void UCREWVideoRouterComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
 	DisconnectFromServer();
 	Super::EndPlay(EndPlayReason);
 }
 
-bool UBlackmagicRouterComponent::ConnectToServer()
+bool UCREWVideoRouterComponent::ConnectToServer()
 {
 	if (Socket)
 	{
@@ -64,7 +64,7 @@ bool UBlackmagicRouterComponent::ConnectToServer()
 	return true;
 }
 
-void UBlackmagicRouterComponent::DisconnectFromServer()
+void UCREWVideoRouterComponent::DisconnectFromServer()
 {
 	if (Socket)
 	{
@@ -76,7 +76,7 @@ void UBlackmagicRouterComponent::DisconnectFromServer()
 	}
 }
 
-void UBlackmagicRouterComponent::Route(int input, int output)
+void UCREWVideoRouterComponent::Route(int input, int output)
 {
 	if (!Socket || !Socket->GetConnectionState() == SCS_Connected)
 	{

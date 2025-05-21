@@ -3,9 +3,9 @@
 using UnrealBuildTool;
 using EpicGames.Core;
 
-public class BlackmagicRouter : ModuleRules
+public class CREWVideoRouter : ModuleRules
 {
-	public BlackmagicRouter(ReadOnlyTargetRules Target) : base(Target)
+	public CREWVideoRouter(ReadOnlyTargetRules Target) : base(Target)
 	{
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 

@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "Modules/ModuleManager.h"
 
-class FBlackmagicModule : public IModuleInterface
+class FCREWVideoModule : public IModuleInterface
 {
 public:
 

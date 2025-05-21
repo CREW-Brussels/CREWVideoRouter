@@ -4,15 +4,15 @@
 #include "Components/ActorComponent.h"
 #include "Sockets.h"
 #include "SocketSubsystem.h"
-#include "BlackmagicRouterComponent.generated.h"
+#include "CREWVideoRouterComponent.generated.h"
 
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
-class BLACKMAGICROUTER_API UBlackmagicRouterComponent : public UActorComponent
+class CREWVIDEOROUTER_API UCREWVideoRouterComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:
-	UBlackmagicRouterComponent();
+	UCREWVideoRouterComponent();
 
 protected:
 	virtual void BeginPlay() override;

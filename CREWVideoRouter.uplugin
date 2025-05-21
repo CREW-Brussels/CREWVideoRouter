@@ -2,9 +2,9 @@
 	"FileVersion": 1,
 	"Version": 1,
 	"VersionName": "1.0",
-	"FriendlyName": "Blackmaic Videohub Router",
+	"FriendlyName": "CREW Video Router",
 	"Description": "A simple component to change the input/output routing of the Blackmagic Videohub",
-	"Category": "Other",
+	"Category": "CREW",
 	"CreatedBy": "CREW",
 	"CreatedByURL": "http://crew.brussels",
 	"DocsURL": "",
@@ -14,7 +14,7 @@
 	"Installed": true,
 	"Modules": [
 		{
-			"Name": "BlackmagicRouter",
+			"Name": "CREWVideoRouter",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}
