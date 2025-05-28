@@ -87,13 +87,18 @@ void UCREWVideoRouterComponent::Route(int input, int output)
 			return;
 		}
 	}
-	FString Message = FString::Format(TEXT("VIDEO OUTPUT ROUTING:\n{0} {1}\n\n"), {output, input});
-	FTCHARToUTF8 Convert(*Message);
-	int32 BytesSent = 0;
-	bool bSuccess = Socket->Send((uint8*)Convert.Get(), Convert.Length(), BytesSent);
+	if (input > 0 && output > 0) {
+		FString Message = FString::Format(TEXT("VIDEO OUTPUT ROUTING:\n{0} {1}\n\n"), { output - 1, input - 1 });
+		FTCHARToUTF8 Convert(*Message);
+		int32 BytesSent = 0;
+		bool bSuccess = Socket->Send((uint8*)Convert.Get(), Convert.Length(), BytesSent);
 
-	if (!bSuccess)
-	{
-		UE_LOG(LogTemp, Error, TEXT("Failed to send TCP message"));
+		if (!bSuccess)
+		{
+			UE_LOG(LogTemp, Error, TEXT("Failed to send TCP message"));
+		}
+	}
+	else {
+		UE_LOG(LogTemp, Error, TEXT("Invalid Video Routing range"));
 	}
 }
