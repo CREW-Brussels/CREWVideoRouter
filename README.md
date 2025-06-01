@@ -1,4 +1,3 @@
-# CREWNetworkFramework
- CREWNetworkFramework
+# CREW Video Routing
 
 To be documented (coming soon)
