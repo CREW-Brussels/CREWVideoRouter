@@ -1,8 +1,22 @@
 # CREW Video Router
 
-A simple Input/Outputs routing system in UE for a Blackmagic video router
+A simple Input/Outputs routing system in UE for a Blackmagic video router. It can send **one input** to **multiple outputs**. The input sent will overwrite what's on the outputs. Older inputs sent will stay the same as long as they are not overwritten. You can control everything from the server.
+***
 
-Documentation coming soon
+Requirements:
+- Unreal Engine 5.3
+- [Download](https://github.com/CREW-Brussels/CREWVideoRouter) the plugin's folder in the Plugins folder of your project here or if your project is on git, add this command in the Plugins folder of your project:
+```
+git add submodule https://github.com/CREW-Brussels/CREWVideoRouter.git
+```
+***
+
+## Use the Plugin in Unreal Engine
+
+1. Create a Blueprint that will be dropped in your scene
+2. Create the following node and decide on what is the input and what is the condition depending on what you use the plugin for.
+![Screenshot 2025-05-28 143522](https://github.com/user-attachments/assets/8ff0a98f-46fd-4a40-a01c-1bc0f5325fc1)
+
 
 ## About
 <img src="https://github.com/user-attachments/assets/bc9dba6e-2478-4d09-86ca-c735ae73f21b" alt="CREW-LOGO" height="70"/>  
